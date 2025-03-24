@@ -15,6 +15,7 @@ protoc:
 	--go-grpc_opt=module=${GO_MODULE} --go-grpc_out=. \
 	./proto/payment/*.proto \
 	./proto/health/*.proto \
+	./proto/pod/*.proto \
 
 build: clean protoc
 
