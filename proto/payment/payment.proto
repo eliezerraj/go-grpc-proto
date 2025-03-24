@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package payment;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/payment";
+
+message Payment {
+    string account_id   = 1 [json_name = "account_id"];
+    string card_number  = 2 [json_name = "card_number"];
+    string card_type    = 3 [json_name = "card_type"];
+    string currency     = 4 [json_name = "currency"];
+    double amount       = 5 [json_name = "amount"];
+    string status       = 6 [json_name = "status"];
+    google.protobuf.Timestamp payment_at = 7 [json_name = "payment_at"];
+    string mcc          = 8 [json_name = "mcc"];
+    string card_model   = 9 [json_name = "card_model"];
+    string terminal     = 10 [json_name = "terminal"];
+}
+
+message PaymentRequest {
+  Payment payment = 1;
+}
+
+message PaymentResponse {
+  Payment payment = 1;
+}

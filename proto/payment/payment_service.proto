@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package payment;
+
+import "proto/payment/payment.proto";
+
+option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/payment";
+
+service PaymentService {
+    rpc AddPayment(PaymentRequest) 
+    returns (PaymentResponse) {}
+
+    rpc GetPayment(PaymentRequest) 
+    returns (PaymentResponse) {}
+}

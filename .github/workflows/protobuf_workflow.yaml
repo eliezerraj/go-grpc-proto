@@ -1,0 +1,34 @@
+name: Compile go protobuf 
+
+on:
+  pull_request:
+    paths:
+      - 'proto/**.proto'
+
+env:
+  GO_VERSION: 1.23.3
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup go env
+        uses: actions/setup-go@v5.0.2
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          cache: true
+          check-latest: false
+
+      - name: Generate Go Source
+        shell: bash
+        run: |
+          make pipeline-build
