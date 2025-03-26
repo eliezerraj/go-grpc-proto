@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package health;
+package token;
 
-option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/health";
+option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/token/health";
 
 message HealthCheckRequest {
   string service = 1;
