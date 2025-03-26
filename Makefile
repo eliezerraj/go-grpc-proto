@@ -16,8 +16,7 @@ protoc:
 	./proto/token/payment/*.proto \
 	./proto/token/health/*.proto \
 	./proto/token/pod/*.proto \
-	./proto/token/card/*.proto \
-	./proto/token/*.proto \
+	./proto/token/card/*.proto 
 
 build: clean protoc
 
