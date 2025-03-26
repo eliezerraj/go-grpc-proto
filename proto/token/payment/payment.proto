@@ -4,7 +4,7 @@ package token;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/eliezerraj/go-grpc-proto/protogen";
+option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/token";
 
 message Payment {
     string account_id   = 1 [json_name = "account_id"];

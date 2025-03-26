@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package token;
 
-option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/token/health";
+option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/token";
 
 message HealthCheckRequest {
   string service = 1;
