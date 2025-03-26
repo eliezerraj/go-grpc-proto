@@ -7,8 +7,6 @@
 package token
 
 import (
-	protogen "github.com/eliezerraj/go-grpc-proto/protogen"
-	health "github.com/eliezerraj/go-grpc-proto/protogen/token/health"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -36,15 +34,15 @@ const file_proto_token_token_service_proto_rawDesc = "" +
 	"\x14GenerateTokenPayment\x12\x15.token.PaymentRequest\x1a\x16.token.PaymentResponse\"\x00B4Z2github.com/eliezerraj/go-grpc-proto/protogen/tokenb\x06proto3"
 
 var file_proto_token_token_service_proto_goTypes = []any{
-	(*PodRequest)(nil),                 // 0: token.PodRequest
-	(*health.HealthCheckRequest)(nil),  // 1: token.HealthCheckRequest
-	(*CardTokenRequest)(nil),           // 2: token.CardTokenRequest
-	(*protogen.PaymentRequest)(nil),    // 3: token.PaymentRequest
-	(*PodResponse)(nil),                // 4: token.PodResponse
-	(*health.HealthCheckResponse)(nil), // 5: token.HealthCheckResponse
-	(*CardTokenResponse)(nil),          // 6: token.CardTokenResponse
-	(*ListCardTokenResponse)(nil),      // 7: token.ListCardTokenResponse
-	(*protogen.PaymentResponse)(nil),   // 8: token.PaymentResponse
+	(*PodRequest)(nil),            // 0: token.PodRequest
+	(*HealthCheckRequest)(nil),    // 1: token.HealthCheckRequest
+	(*CardTokenRequest)(nil),      // 2: token.CardTokenRequest
+	(*PaymentRequest)(nil),        // 3: token.PaymentRequest
+	(*PodResponse)(nil),           // 4: token.PodResponse
+	(*HealthCheckResponse)(nil),   // 5: token.HealthCheckResponse
+	(*CardTokenResponse)(nil),     // 6: token.CardTokenResponse
+	(*ListCardTokenResponse)(nil), // 7: token.ListCardTokenResponse
+	(*PaymentResponse)(nil),       // 8: token.PaymentResponse
 }
 var file_proto_token_token_service_proto_depIdxs = []int32{
 	0, // 0: token.TokenService.GetPod:input_type -> token.PodRequest
@@ -73,6 +71,8 @@ func file_proto_token_token_service_proto_init() {
 	}
 	file_proto_token_pod_pod_proto_init()
 	file_proto_token_card_card_proto_init()
+	file_proto_token_payment_payment_proto_init()
+	file_proto_token_health_health_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

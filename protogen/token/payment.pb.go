@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: proto/token/payment/payment.proto
 
-package protogen
+package token
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -263,7 +263,7 @@ const file_proto_token_payment_payment_proto_rawDesc = "" +
 	"\x0ePaymentRequest\x12(\n" +
 	"\apayment\x18\x01 \x01(\v2\x0e.token.PaymentR\apayment\";\n" +
 	"\x0fPaymentResponse\x12(\n" +
-	"\apayment\x18\x01 \x01(\v2\x0e.token.PaymentR\apaymentB.Z,github.com/eliezerraj/go-grpc-proto/protogenb\x06proto3"
+	"\apayment\x18\x01 \x01(\v2\x0e.token.PaymentR\apaymentB4Z2github.com/eliezerraj/go-grpc-proto/protogen/tokenb\x06proto3"
 
 var (
 	file_proto_token_payment_payment_proto_rawDescOnce sync.Once
