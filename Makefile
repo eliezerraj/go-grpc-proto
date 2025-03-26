@@ -13,9 +13,11 @@ protoc:
 	@echo "Compile protoc files..."
 	protoc --go_opt=module=${GO_MODULE} --go_out=. \
 	--go-grpc_opt=module=${GO_MODULE} --go-grpc_out=. \
-	./proto/payment/*.proto \
-	./proto/health/*.proto \
-	./proto/pod/*.proto \
+	./proto/token/payment/*.proto \
+	./proto/token/health/*.proto \
+	./proto/token/pod/*.proto \
+	./proto/token/card/*.proto \
+	./proto/token/*.proto \
 
 build: clean protoc
 

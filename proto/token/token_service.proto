@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package token;
+
+import "github.com/eliezerraj/go-grpc-proto/proto/token/pod/pod.proto";
+import "github.com/eliezerraj/go-grpc-proto/proto/token/card/card.proto";
+import "github.com/eliezerraj/go-grpc-proto/proto/token/payment/payment.proto";
+import "github.com/eliezerraj/go-grpc-proto/proto/token/health/health.proto";
+
+option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/token";
+
+service TokenService {
+    rpc GetPod(PodRequest) returns (PodResponse) {}
+
+    rpc Check(HealthCheckRequest) returns (HealthCheckResponse) {};
+    rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse) {};
+
+    rpc CreateCardToken(CardTokenRequest) returns (CardTokenResponse) {};
+    rpc GetCardToken(CardTokenRequest) returns (ListCardTokenResponse) {};
+    
+    rpc GenerateTokenPayment(PaymentRequest) returns (PaymentResponse) {};
+}

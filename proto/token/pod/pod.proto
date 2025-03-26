@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package pod;
+package token;
 
-option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/pod";
+option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/token";
 
 message Pod {
     string version      = 1 [json_name = "version"];
