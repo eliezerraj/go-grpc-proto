@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package token;
 
-import "github.com/eliezerraj/go-grpc-proto/proto/token/pod/pod.proto";
-import "github.com/eliezerraj/go-grpc-proto/proto/token/card/card.proto";
-import "github.com/eliezerraj/go-grpc-proto/proto/token/payment/payment.proto";
-import "github.com/eliezerraj/go-grpc-proto/proto/token/health/health.proto";
+import "github.com/eliezerraj/go-grpc-proto/proto/token/pod.proto";
+import "github.com/eliezerraj/go-grpc-proto/proto/token/card.proto";
+import "github.com/eliezerraj/go-grpc-proto/proto/token/payment.proto";
+import "github.com/eliezerraj/go-grpc-proto/proto/token/health.proto";
 
 option go_package = "github.com/eliezerraj/go-grpc-proto/protogen/token";
 
