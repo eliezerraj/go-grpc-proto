@@ -58,8 +58,10 @@ jobs:
           tagging_message: ${{ steps.tag_version.outputs.new_tag }}
           branch: main
           file_pattern: 'protogen/*'
-          commit_options: "--no-verify"
-          push_options: "--force"
+
+      - name: Force Push Changes (Workaround)
+        run: |
+          git push origin main --force
 
       - name: Bump version and push tag
         id: tag_version
