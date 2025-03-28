@@ -59,9 +59,9 @@ jobs:
           branch: main
           file_pattern: 'protogen/*'
 
-      - name: Force Push Changes (Workaround)
-        run: |
-          git push origin main --force
+      #- name: Force Push Changes (Workaround)
+      #  run: |
+      #    git push origin main --force
 
       - name: Bump version and push tag
         id: tag_version
