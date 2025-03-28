@@ -42,8 +42,7 @@ jobs:
 
       - name: Generate gRPC Code from Protobuf
         run: |
-          protoc --go_opt=module=${GO_MODULE} --go_out=. \
-          --go-grpc_opt=module=${GO_MODULE} --go-grpc_out=. \
+          protoc --go_out=. --go-grpc_out=. \
           ./proto/token/payment/*.proto \
           ./proto/token/health/*.proto \
           ./proto/token/pod/*.proto \
